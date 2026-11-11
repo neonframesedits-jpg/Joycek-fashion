@@ -276,7 +276,7 @@ p { margin: 0; }
 
 .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1.4rem, 2.5vw, 2.2rem); max-width: 1320px; margin: 0 auto; }
 .card { display: flex; flex-direction: column; flex: 0 1 290px; min-width: 0; animation: rise .7s var(--ease) both; }
-@media (max-width: 640px) { .card { flex-basis: 100%; } }
+
 .card.is-hidden { display: none; }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
 .card__frame {
@@ -291,7 +291,7 @@ p { margin: 0; }
   font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; padding: .45rem .75rem; border-radius: 99px;
 }
 .card__sew {
-  position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2;
+  position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2; width: auto;
   transform: translateY(calc(100% + 1.2rem)); transition: transform .55s var(--ease);
 }
 .card:hover .card__sew, .card:focus-within .card__sew { transform: none; }
@@ -302,7 +302,18 @@ p { margin: 0; }
 .card__in { display: none; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sage); margin-top: .3rem; }
 .card.is-in .card__in { display: block; }
 @media (hover: none) { .card__sew { transform: none; } }
-
+@media (max-width: 640px) {
+  /* two pieces per row on phones */
+  .grid { gap: 1.6rem .8rem; }
+  .card { flex: 0 1 calc(50% - .4rem); }
+  .card__frame { border-radius: 16px; }
+  .card__badge { left: .5rem; top: .5rem; font-size: .52rem; letter-spacing: .14em; padding: .35rem .55rem; }
+  .card__sew { left: .5rem; right: .5rem; bottom: .5rem; padding: .7rem .5rem; font-size: .66rem; letter-spacing: .1em; }
+  .card__body { padding: .7rem .15rem 0; }
+  .card__name { font-size: 1.12rem; line-height: 1.15; }
+  .card__meta { font-size: .68rem; line-height: 1.45; }
+  .filters { margin-bottom: 2rem; }
+}
 /* ---------- Atelier ---------- */
 .atelier {
   display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: center;
