@@ -8,7 +8,6 @@ A luxury storefront for a unisex fashion house that sews every garment in-house 
 Open `index.html` in a browser. There's no build step, and you can host it on GitHub Pages, Netlify or any static host.
 
 ## Customise
-- **Currency:** edit `CURRENCY` at the top of `script.js`.
-- **Products:** edit the `PRODUCTS` array in `script.js` (name, category, price, fabric colour, pattern, silhouette).
-- **Photos:** the garments are illustrated SVGs. To use real photography, replace `${garmentArt(p)}` in the card template with `<img class="art" src="..." style="object-fit:cover">`.
+- **Add a new piece:** put the photo in `images/collection/` (portrait, ideally 3:4, e.g. 900×1200), then add one line to the `PRODUCTS` list at the top of `script.js` with its name, category (`gowns`, `sets` or `dresses`), file name and a short description. No prices are shown on the site.
+- **Hero and slideshow photos:** any element with `data-photo="<product id>"` in `index.html` shows that product's photo.
 - **Testimonials** in `index.html` are placeholders. Replace them with real customer words before launch.

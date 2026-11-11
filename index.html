@@ -66,8 +66,8 @@
         <svg class="thread" viewBox="0 0 600 700" preserveAspectRatio="none">
           <path id="threadPath" d="M20 40 C 200 0, 260 200, 160 300 S 120 520, 330 520 S 560 640, 580 690" />
         </svg>
-        <div class="hero__card hero__card--a" data-art="wrap" data-fabric="#7a2e2a" data-accent="#c9a46a" data-pattern="weave"></div>
-        <div class="hero__card hero__card--b" data-art="blazer" data-fabric="#1f2a2b" data-accent="#c9a46a" data-pattern="pinstripe"></div>
+        <div class="hero__card hero__card--a" data-photo="magenta"></div>
+        <div class="hero__card hero__card--b" data-photo="coral"></div>
         <div class="hero__tag">
           <span class="hero__tag-label">Hand-finished</span>
           <span class="hero__tag-sig">by Joycek Fashion</span>
@@ -92,8 +92,8 @@
               <a href="#second-stitch" class="btn btn--gold">See how it works</a>
             </div>
             <div class="slide__art">
-              <div class="slide__card slide__card--back" data-art="blazer" data-fabric="#1f2a2b" data-accent="#c9a46a" data-pattern="pinstripe" data-bg="#e2ddd2,#b9ae9b"></div>
-              <div class="slide__card slide__card--front" data-art="wrap" data-fabric="#7a2e2a" data-accent="#c9a46a" data-pattern="weave" data-bg="#efdcc8,#d6b48f"></div>
+              <div class="slide__card slide__card--back" data-photo="coral"></div>
+              <div class="slide__card slide__card--front" data-photo="blue"></div>
               <span class="slide__seal">2 for 1</span>
             </div>
           </article>
@@ -101,26 +101,26 @@
           <article class="slide" style="--s1:#1f2a2b;--s2:#0e1314" aria-roledescription="slide" aria-label="2 of 5">
             <div class="slide__copy">
               <p class="slide__kicker">New this season</p>
-              <h2 class="slide__title">The Oxblood<br /><em>Evening Coat</em></h2>
-              <p class="slide__text">Deep velvet, a sharp lapel and a hand-finished belt. Made for the night, and made by hand.</p>
-              <a href="#collection" class="btn btn--gold" data-filter-go="outerwear">Sew it for me</a>
+              <h2 class="slide__title">The Magenta<br /><em>Rosette Gown</em></h2>
+              <p class="slide__text">A beaded lace corset, sculpted rosette shoulders and a sweeping draped train. Made for the big day, and made by hand.</p>
+              <a href="#collection" class="btn btn--gold" data-filter-go="gowns">Sew it for me</a>
             </div>
             <div class="slide__art">
-              <div class="slide__card slide__card--solo" data-art="coat" data-fabric="#5a1f1c" data-accent="#c9a46a" data-pattern="satin" data-bg="#efe2d8,#c9a892"></div>
+              <div class="slide__card slide__card--solo" data-photo="magenta"></div>
               <span class="slide__seal">New</span>
             </div>
           </article>
 
           <article class="slide" style="--s1:#5f6e55;--s2:#2c3527" aria-roledescription="slide" aria-label="3 of 5">
             <div class="slide__copy">
-              <p class="slide__kicker">Unisex tailoring</p>
+              <p class="slide__kicker">Unisex atelier</p>
               <h2 class="slide__title">One cut.<br /><em>Every body.</em></h2>
-              <p class="slide__text">Blazers, trousers and jumpsuits drafted to your measurements, for women, for men, and for everyone in between.</p>
-              <a href="#collection" class="btn btn--gold" data-filter-go="tailoring">Explore tailoring</a>
+              <p class="slide__text">Sash sets, sheaths and capelets drafted to your measurements, for women, for men, and for everyone in between.</p>
+              <a href="#collection" class="btn btn--gold" data-filter-go="all">Explore the collection</a>
             </div>
             <div class="slide__art">
-              <div class="slide__card slide__card--back" data-art="trousers" data-fabric="#d8c3a0" data-accent="#7a2e2a" data-pattern="weave" data-bg="#e6dccd,#c7b597"></div>
-              <div class="slide__card slide__card--front" data-art="jumpsuit" data-fabric="#5f6e55" data-accent="#e6cf9f" data-pattern="plain" data-bg="#efe7da,#d8cab1"></div>
+              <div class="slide__card slide__card--back" data-photo="coral"></div>
+              <div class="slide__card slide__card--front" data-photo="ivory"></div>
               <span class="slide__seal">Unisex</span>
             </div>
           </article>
@@ -128,12 +128,12 @@
           <article class="slide" style="--s1:#a8743a;--s2:#5a3a18" aria-roledescription="slide" aria-label="4 of 5">
             <div class="slide__copy">
               <p class="slide__kicker">Cloth with a story</p>
-              <h2 class="slide__title">The Heritage<br /><em>Print Kaftan</em></h2>
-              <p class="slide__text">Bold print and an easy, flowing cut. Every motif is matched at the seams by hand.</p>
-              <a href="#collection" class="btn btn--primary" data-filter-go="dresses">Sew it for me</a>
+              <h2 class="slide__title">The Violet<br /><em>Ankara Peplum</em></h2>
+              <p class="slide__text">Bold Ankara print, a sculpted peplum and sheer black lace sleeves. Every motif is matched at the seams by hand.</p>
+              <a href="#collection" class="btn btn--primary" data-filter-go="sets">Sew it for me</a>
             </div>
             <div class="slide__art">
-              <div class="slide__card slide__card--solo" data-art="kaftan" data-fabric="#c9a46a" data-accent="#7a2e2a" data-pattern="print" data-bg="#efe6d6,#d9c7a6"></div>
+              <div class="slide__card slide__card--solo" data-photo="violet"></div>
               <span class="slide__seal">Hand-matched</span>
             </div>
           </article>
@@ -226,10 +226,9 @@
 
       <div class="filters reveal" role="tablist" aria-label="Filter collection">
         <button class="chip is-active" data-filter="all">All pieces</button>
-        <button class="chip" data-filter="dresses">Dresses &amp; Kaftans</button>
-        <button class="chip" data-filter="tailoring">Tailoring</button>
-        <button class="chip" data-filter="shirts">Shirts</button>
-        <button class="chip" data-filter="outerwear">Outerwear</button>
+        <button class="chip" data-filter="gowns">Gowns</button>
+        <button class="chip" data-filter="sets">Two-piece sets</button>
+        <button class="chip" data-filter="dresses">Dresses</button>
       </div>
 
       <div class="grid" id="grid"><!-- rendered by script.js --></div>
@@ -362,10 +361,9 @@
     <div class="drawer__hint" id="drawerHint"></div>
     <ul class="drawer__list" id="bagList"></ul>
     <div class="drawer__foot">
-      <div class="row"><span>Pieces</span><span id="sumPieces">0</span></div>
-      <div class="row"><span>Garment value</span><span id="sumValue">0</span></div>
-      <div class="row row--gift"><span>The Second Stitch</span><span id="sumGift">0</span></div>
-      <div class="row row--total"><span>You pay</span><span id="sumTotal">0</span></div>
+      <div class="row"><span>Pieces chosen</span><span id="sumPieces">0</span></div>
+      <div class="row"><span>Sewn for you</span><span id="sumSewn">0</span></div>
+      <div class="row row--gift row--total"><span>Gifted by us</span><span id="sumGift">0</span></div>
       <button class="btn btn--primary btn--block" id="checkout">Send to the atelier</button>
       <p class="drawer__note">Each pair is sewn to order and delivered to your door.</p>
     </div>

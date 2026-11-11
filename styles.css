@@ -192,10 +192,13 @@ p { margin: 0; }
 .needle { position: absolute; right: 2%; top: 4%; width: 130px; transform: rotate(-32deg); z-index: 4; animation: needle 3s ease-in-out infinite; }
 @keyframes needle { 50% { transform: rotate(-32deg) translateX(-10px); } }
 
-/* ---------- Garment art (generated) ---------- */
-.art { position: absolute; inset: 0; width: 100%; height: 100%; }
-.art__bg { position: absolute; inset: 0; }
-.art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* ---------- Garment photos ---------- */
+.photo {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+  background: #ebe7df;
+}
+.hero__card, .slide__card, .card__frame, .line__thumb { background: #ebe7df; }
 
 /* ---------- Marquee ---------- */
 .marquee { background: var(--oxblood); color: var(--ivory); overflow: hidden; padding: 1.3rem 0; border-block: 1px dashed var(--gold); }
@@ -271,16 +274,17 @@ p { margin: 0; }
 .chip:hover { border-color: var(--ink); color: var(--ink); }
 .chip.is-active { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: clamp(1.4rem, 2.5vw, 2.2rem); max-width: 1320px; margin: 0 auto; }
-.card { display: flex; flex-direction: column; animation: rise .7s var(--ease) both; }
+.grid { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1.4rem, 2.5vw, 2.2rem); max-width: 1320px; margin: 0 auto; }
+.card { display: flex; flex-direction: column; flex: 0 1 300px; min-width: 0; animation: rise .7s var(--ease) both; }
+@media (max-width: 640px) { .card { flex-basis: 100%; } }
 .card.is-hidden { display: none; }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
 .card__frame {
   position: relative; aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden;
   box-shadow: 0 24px 50px -32px rgba(23,26,27,.5);
 }
-.card__frame .art { transition: transform 1.2s var(--ease); }
-.card:hover .card__frame .art { transform: scale(1.05); }
+.card__frame .photo { transition: transform 1.2s var(--ease); }
+.card:hover .card__frame .photo { transform: scale(1.05); }
 .card__badge {
   position: absolute; left: 1rem; top: 1rem; z-index: 2;
   background: rgba(246,241,233,.92); color: var(--ink); backdrop-filter: blur(6px);
@@ -288,7 +292,7 @@ p { margin: 0; }
 }
 .card__sew {
   position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2;
-  transform: translateY(130%); transition: transform .55s var(--ease);
+  transform: translateY(calc(100% + 1.2rem)); transition: transform .55s var(--ease);
 }
 .card:hover .card__sew, .card:focus-within .card__sew { transform: none; }
 .card__body { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1.1rem .3rem 0; }
@@ -567,7 +571,7 @@ p { margin: 0; }
 .slide__card--front { width: 52%; height: 86%; left: 4%; bottom: 0; transition-delay: .15s; }
 .slide__card--back  { width: 46%; height: 76%; right: 4%; top: 0; transition-delay: .3s; }
 .slide__card--solo  { width: 62%; height: 100%; left: 50%; margin-left: -31%; }
-.slide.is-active .slide__card .art { animation: kenburns 9s ease-out both; }
+.slide.is-active .slide__card .photo { animation: kenburns 9s ease-out both; }
 @keyframes kenburns { from { transform: scale(1.12); } to { transform: scale(1); } }
 .slide__seal {
   position: absolute; right: 2%; bottom: 8%; z-index: 3;
