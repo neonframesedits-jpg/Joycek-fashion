@@ -11,6 +11,11 @@ const PRODUCTS = [
   { id: "coral",   name: "Coral Royale Sash Set",        cat: "sets",    img: "coral-royale-sash-set.jpg",         meta: "Tunic, draped sash & wide-leg trousers",               badge: "Traditional" },
   { id: "violet",  name: "Violet Ankara Peplum Set",     cat: "sets",    img: "violet-ankara-peplum-lace-set.jpg", meta: "Ankara print · black lace sleeves · sculpted peplum" },
   { id: "ivory",   name: "Ivory Tweed Capelet Dress",    cat: "dresses", img: "ivory-tweed-capelet-dress.jpg",     meta: "Tweed sheath · cropped capelet" },
+  { id: "burgundy", name: "Burgundy Aso-Oke Wrapper Set",  cat: "sets",    img: "burgundy-aso-oke-wrapper-set.jpg",  meta: "Off-shoulder bell-sleeve top · striped wrapper & sash", badge: "Traditional" },
+  { id: "sky",      name: "Sky Pearl Cape-Sleeve Gown",    cat: "gowns",   img: "sky-pearl-cape-sleeve-gown.jpg",    meta: "Column gown · cape sleeves · pearl trim" },
+  { id: "cobalt",   name: "Cobalt Tassel Sheath Dress",    cat: "dresses", img: "cobalt-tassel-sheath-dress.jpg",    meta: "Sweetheart neck · split sleeves · tassel hem", badge: "New" },
+  { id: "splash",   name: "Monochrome Splash Ruffle Dress", cat: "dresses", img: "monochrome-splash-ruffle-dress.jpg", meta: "Corset bodice · tie shoulders · ruffled skirt" },
+  { id: "emerald",  name: "Emerald Stallion Ankara Dress", cat: "dresses", img: "emerald-stallion-ankara-dress.jpg", meta: "Ankara print · lace panels · contrast piping" },
 ];
 
 const byId = (id) => PRODUCTS.find((p) => p.id === id);

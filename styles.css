@@ -275,7 +275,7 @@ p { margin: 0; }
 .chip.is-active { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
 
 .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1.4rem, 2.5vw, 2.2rem); max-width: 1320px; margin: 0 auto; }
-.card { display: flex; flex-direction: column; flex: 0 1 300px; min-width: 0; animation: rise .7s var(--ease) both; }
+.card { display: flex; flex-direction: column; flex: 0 1 290px; min-width: 0; animation: rise .7s var(--ease) both; }
 @media (max-width: 640px) { .card { flex-basis: 100%; } }
 .card.is-hidden { display: none; }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
