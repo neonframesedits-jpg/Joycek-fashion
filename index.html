@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joycek — Sewn by Hand, Delivered to You</title>
+  <meta name="description" content="Joycek is a unisex atelier. Every piece is cut and sewn by our own hands, pressed, wrapped and delivered to your door. Sew one, and we sew a second for you, on the house." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce">
+    <span class="announce__dot"></span>
+    <p><em>The Second Stitch</em> — sew one piece, and we sew a second of your choosing, on the house.</p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="Joycek home">
+      <span class="logo__mark">J</span>
+      <span class="logo__word">Joycek</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#collection">Collection</a>
+      <a href="#second-stitch">The Second Stitch</a>
+      <a href="#atelier">The Atelier</a>
+      <a href="#journey">From Needle to Door</a>
+    </nav>
+    <button class="bag-btn" id="bagBtn" aria-label="Open your atelier bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>Atelier Bag</span>
+      <b class="bag-btn__count" id="bagCount">0</b>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow reveal">Unisex Atelier · Est. by hand</p>
+        <h1 class="hero__title reveal">
+          Sewn by <em>our</em> hands.<br />
+          Worn by <em>yours.</em>
+        </h1>
+        <p class="hero__lede reveal">
+          We don't stock clothes — we make them. Every Joycek piece is cut, stitched and pressed
+          at our own table, then wrapped and delivered straight to your door.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#collection" class="btn btn--primary">Sew it for me</a>
+          <a href="#second-stitch" class="btn btn--ghost">Discover The Second Stitch</a>
+        </div>
+        <ul class="hero__facts reveal">
+          <li><strong>100%</strong><span>sewn in-house</span></li>
+          <li><strong>2 for 1</strong><span>pieces per order</span></li>
+          <li><strong>Door</strong><span>to door delivery</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <svg class="thread" viewBox="0 0 600 700" preserveAspectRatio="none">
+          <path id="threadPath" d="M20 40 C 200 0, 260 200, 160 300 S 120 520, 330 520 S 560 640, 580 690" />
+        </svg>
+        <div class="hero__card hero__card--a" data-art="wrap" data-fabric="#7a2e2a" data-accent="#c9a46a" data-pattern="weave"></div>
+        <div class="hero__card hero__card--b" data-art="blazer" data-fabric="#1f2a2b" data-accent="#c9a46a" data-pattern="pinstripe"></div>
+        <div class="hero__tag">
+          <span class="hero__tag-label">Hand-finished</span>
+          <span class="hero__tag-sig">by the Joycek atelier</span>
+        </div>
+        <div class="needle">
+          <svg viewBox="0 0 120 20"><defs><linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#f4efe6"/><stop offset=".5" stop-color="#9b9a96"/><stop offset="1" stop-color="#e9e4da"/></linearGradient></defs><path d="M2 10 L100 7 Q118 10 100 13 Z" fill="url(#steel)"/><ellipse cx="96" cy="10" rx="7" ry="1.4" fill="#f6f1e9"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Measured</span><i>✦</i><span>Cut</span><i>✦</i><span>Stitched</span><i>✦</i><span>Pressed</span><i>✦</i><span>Wrapped</span><i>✦</i><span>Delivered</span><i>✦</i>
+        <span>Measured</span><i>✦</i><span>Cut</span><i>✦</i><span>Stitched</span><i>✦</i><span>Pressed</span><i>✦</i><span>Wrapped</span><i>✦</i><span>Delivered</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- THE SECOND STITCH -->
+    <section class="second" id="second-stitch">
+      <div class="second__inner">
+        <div class="second__head">
+          <p class="eyebrow eyebrow--light reveal">Our signature promise</p>
+          <h2 class="reveal">The <em>Second Stitch</em></h2>
+          <p class="second__lede reveal">
+            When you commission a piece, our needle doesn't stop at one.
+            Choose any second garment from the collection — and we'll cut it, sew it
+            and send it alongside, <em>as our gift to you.</em>
+          </p>
+        </div>
+
+        <div class="second__pair reveal">
+          <div class="pair-card">
+            <span class="pair-card__no">I</span>
+            <h3>Your piece</h3>
+            <p>Choose the garment you've been dreaming of. We sew it to your measure.</p>
+          </div>
+          <div class="pair-plus">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" /><path d="M40 22v36M22 40h36"/></svg>
+          </div>
+          <div class="pair-card pair-card--gift">
+            <span class="pair-card__no">II</span>
+            <h3>Our gift</h3>
+            <p>Pick any second piece in the collection. Sewn with the same care. On the house.</p>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li class="reveal"><span>01</span><h4>Choose your piece</h4><p>Browse the collection and tap <em>Sew it</em>.</p></li>
+          <li class="reveal"><span>02</span><h4>Choose your second</h4><p>Any garment you love — dress, shirt, coat or trousers.</p></li>
+          <li class="reveal"><span>03</span><h4>We sew both</h4><p>Cut and stitched by hand, at our own table, to your measure.</p></li>
+          <li class="reveal"><span>04</span><h4>Wrapped &amp; delivered</h4><p>Pressed, folded in tissue, and brought to your door.</p></li>
+        </ol>
+        <p class="fine">In every pair, the lesser-valued piece is our gift. Two pieces, one price — always.</p>
+      </div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="collection" id="collection">
+      <div class="section-head">
+        <p class="eyebrow reveal">The Collection · For every body</p>
+        <h2 class="reveal">Choose what we <em>sew</em> for you</h2>
+        <p class="section-head__sub reveal">Every piece is made to order — nothing waits on a shelf. Pick two, pay for one.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Filter collection">
+        <button class="chip is-active" data-filter="all">All pieces</button>
+        <button class="chip" data-filter="dresses">Dresses &amp; Kaftans</button>
+        <button class="chip" data-filter="tailoring">Tailoring</button>
+        <button class="chip" data-filter="shirts">Shirts</button>
+        <button class="chip" data-filter="outerwear">Outerwear</button>
+      </div>
+
+      <div class="grid" id="grid"><!-- rendered by script.js --></div>
+    </section>
+
+    <!-- ATELIER STORY -->
+    <section class="atelier" id="atelier">
+      <div class="atelier__art reveal" aria-hidden="true">
+        <div class="spool">
+          <div class="spool__thread"></div>
+        </div>
+        <div class="swatches">
+          <span style="--c:#7a2e2a"></span>
+          <span style="--c:#c9a46a"></span>
+          <span style="--c:#1f2a2b"></span>
+          <span style="--c:#8a9a7b"></span>
+          <span style="--c:#e8d9c4"></span>
+        </div>
+        <div class="tape">
+          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span>
+        </div>
+      </div>
+      <div class="atelier__copy">
+        <p class="eyebrow reveal">The Atelier</p>
+        <h2 class="reveal">Every seam is <em>ours.</em></h2>
+        <p class="reveal">
+          Joycek is not a warehouse. It is a table, a pair of shears, a measuring tape and
+          the patient hands that use them. We choose the cloth, we cut the pattern, and we sew
+          every seam ourselves — for women, for men, for everyone in between.
+        </p>
+        <p class="reveal">
+          Because nothing passes through a middleman, we can offer couture care at an honest
+          price — and still have the time to sew you a second piece, just because.
+        </p>
+        <div class="signature reveal">
+          <span>With thread &amp; love,</span>
+          <strong>The Joycek Atelier</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey" id="journey">
+      <div class="section-head">
+        <p class="eyebrow reveal">From needle to door</p>
+        <h2 class="reveal">The journey of your <em>garment</em></h2>
+      </div>
+      <div class="journey__line">
+        <div class="journey__stitch" aria-hidden="true"></div>
+        <article class="stop reveal">
+          <div class="stop__icon"><svg viewBox="0 0 48 48"><path d="M6 30h36v8H6z"/><path d="M10 30v8M16 30v4M22 30v8M28 30v4M34 30v8"/></svg></div>
+          <h4>Measured</h4>
+          <p>Share your measurements, or choose a standard size — we tailor to fit.</p>
+        </article>
+        <article class="stop reveal">
+          <div class="stop__icon"><svg viewBox="0 0 48 48"><circle cx="14" cy="34" r="6"/><circle cx="34" cy="34" r="6"/><path d="M18 30 38 8M30 30 10 8"/></svg></div>
+          <h4>Cut</h4>
+          <p>Your cloth is laid out and cut by hand, pattern piece by pattern piece.</p>
+        </article>
+        <article class="stop reveal">
+          <div class="stop__icon"><svg viewBox="0 0 48 48"><path d="M8 40 40 8"/><ellipse cx="37" cy="11" rx="2" ry="4" transform="rotate(45 37 11)"/><path d="M6 24c6-6 10 6 16 0s10 6 16 0" stroke-dasharray="3 3"/></svg></div>
+          <h4>Stitched</h4>
+          <p>Every seam is sewn in our atelier, finished and checked twice.</p>
+        </article>
+        <article class="stop reveal">
+          <div class="stop__icon"><svg viewBox="0 0 48 48"><path d="M8 20h24v18H8z"/><path d="M32 24h8l2 8H32"/><circle cx="14" cy="40" r="3"/><circle cx="34" cy="40" r="3"/></svg></div>
+          <h4>Delivered</h4>
+          <p>Pressed, wrapped in tissue, boxed and brought right to your door.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="voices">
+      <div class="section-head">
+        <p class="eyebrow reveal">Worn &amp; loved</p>
+        <h2 class="reveal">Words from <em>our</em> wearers</h2>
+      </div>
+      <div class="voices__grid">
+        <blockquote class="voice reveal">
+          <p>“It arrived wrapped like a gift — and there were two. I chose a linen shirt for my husband as my second piece. We wore them out the same night.”</p>
+          <cite>Adaeze · Lagos</cite>
+        </blockquote>
+        <blockquote class="voice reveal">
+          <p>“You can feel that a person made this. The seams are perfect, the fit is mine. Nothing off the rack has ever felt like this.”</p>
+          <cite>Tomi · Abuja</cite>
+        </blockquote>
+        <blockquote class="voice reveal">
+          <p>“The Second Stitch made it a no-brainer. A tailored blazer and a wrap dress for my sister — one price. Already planning my next pair.”</p>
+          <cite>Kelechi · Port Harcourt</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__inner reveal">
+        <h2>Two garments.<br /><em>One price.</em> Made by hand.</h2>
+        <p>Join the Joycek list for first look at new cloth, new patterns and atelier stories.</p>
+        <form class="cta__form" id="ctaForm">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" placeholder="Your email address" required />
+          <button class="btn btn--gold" type="submit">Keep me close</button>
+        </form>
+        <p class="cta__thanks" id="ctaThanks" hidden>Thank you — you're on our list. We'll be in touch with thread &amp; news.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a href="#top" class="logo logo--light"><span class="logo__mark">J</span><span class="logo__word">Joycek</span></a>
+      <p>A unisex atelier. Sewn by hand, delivered to you.</p>
+    </div>
+    <div class="footer__cols">
+      <div><h5>Atelier</h5><a href="#atelier">Our story</a><a href="#journey">How it's made</a><a href="#second-stitch">The Second Stitch</a></div>
+      <div><h5>Care</h5><a href="#journey">Delivery</a><a href="#collection">Sizing &amp; fit</a><a href="#collection">Fabric care</a></div>
+      <div><h5>Say hello</h5><a href="#top">Instagram</a><a href="#top">WhatsApp</a><a href="#top">Email us</a></div>
+    </div>
+    <p class="footer__legal">© <span id="year"></span> Joycek Atelier. Every piece sewn by hand.</p>
+  </footer>
+
+  <!-- BAG DRAWER -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Your atelier bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Your Atelier Bag</h3>
+      <button class="drawer__close" id="drawerClose" aria-label="Close bag">×</button>
+    </div>
+    <div class="drawer__hint" id="drawerHint"></div>
+    <ul class="drawer__list" id="bagList"></ul>
+    <div class="drawer__foot">
+      <div class="row"><span>Pieces</span><span id="sumPieces">0</span></div>
+      <div class="row"><span>Garment value</span><span id="sumValue">0</span></div>
+      <div class="row row--gift"><span>The Second Stitch</span><span id="sumGift">0</span></div>
+      <div class="row row--total"><span>You pay</span><span id="sumTotal">0</span></div>
+      <button class="btn btn--primary btn--block" id="checkout">Send to the atelier</button>
+      <p class="drawer__note">Each pair is sewn to order and delivered to your door.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
