@@ -16,6 +16,7 @@ const PRODUCTS = [
   { id: "cobalt",   name: "Cobalt Tassel Sheath Dress",    cat: "dresses", img: "cobalt-tassel-sheath-dress.jpg",    meta: "Sweetheart neck · split sleeves · tassel hem", badge: "New" },
   { id: "splash",   name: "Monochrome Splash Ruffle Dress", cat: "dresses", img: "monochrome-splash-ruffle-dress.jpg", meta: "Corset bodice · tie shoulders · ruffled skirt" },
   { id: "emerald",  name: "Emerald Stallion Ankara Dress", cat: "dresses", img: "emerald-stallion-ankara-dress.jpg", meta: "Ankara print · lace panels · contrast piping" },
+  { id: "marigold", name: "Marigold Guipure Lace Midi",    cat: "dresses", img: "marigold-guipure-lace-midi-dress.jpg", meta: "Guipure lace · puff sleeves · tiered scalloped hem", badge: "New" },
 ];
 
 const byId = (id) => PRODUCTS.find((p) => p.id === id);
