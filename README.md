@@ -1,4 +1,4 @@
-# Joycek — Unisex Atelier
+# Joycek Fashion — Unisex Atelier
 
 A luxury storefront for a unisex fashion house that sews every garment in-house and delivers it to the customer's door.
 

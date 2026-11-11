@@ -145,7 +145,7 @@ document.querySelectorAll("[data-art]").forEach((el) => {
     fabric: el.dataset.fabric,
     accent: el.dataset.accent,
     pattern: el.dataset.pattern,
-    bg: el.dataset.art === "wrap" ? ["#efdcc8", "#d6b48f"] : ["#e2ddd2", "#b9ae9b"],
+    bg: el.dataset.bg ? el.dataset.bg.split(",") : el.dataset.art === "wrap" ? ["#efdcc8", "#d6b48f"] : ["#e2ddd2", "#b9ae9b"],
   });
 });
 
@@ -293,3 +293,88 @@ $("ctaForm").addEventListener("submit", (e) => {
 });
 
 $("year").textContent = new Date().getFullYear();
+
+/* ---------- Slideshow ---------- */
+(function slideshow() {
+  const show = document.querySelector(".show");
+  if (!show) return;
+  const viewport = $("showViewport"), track = $("showTrack");
+  const slides = [...track.children];
+  const dotsWrap = $("showDots");
+  const DURATION = 6000;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0, timer = null, paused = false;
+
+  show.style.setProperty("--dur", DURATION + "ms");
+  $("showAll").textContent = String(slides.length).padStart(2, "0");
+  slides.forEach((s, i) => s.setAttribute("data-no", String(i + 1).padStart(2, "0")));
+  dotsWrap.innerHTML = slides.map((_, i) =>
+    `<button class="show__dot" role="tab" aria-label="Slide ${i + 1}" data-go="${i}"></button>`).join("");
+  const dots = [...dotsWrap.children];
+
+  function go(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(${-index * 100}%)`;
+    slides.forEach((s, k) => {
+      s.classList.toggle("is-active", k === index);
+      s.setAttribute("aria-hidden", k === index ? "false" : "true");
+      s.querySelectorAll("a, button").forEach((el) => (el.tabIndex = k === index ? 0 : -1));
+    });
+    dots.forEach((d, k) => {
+      d.classList.remove("is-active");
+      d.classList.toggle("is-done", k < index);
+      d.setAttribute("aria-selected", k === index);
+    });
+    void dotsWrap.offsetWidth; // restart the progress animation
+    if (!reduce) dots[index].classList.add("is-active"); else dots[index].classList.add("is-done");
+    $("showNow").textContent = String(index + 1).padStart(2, "0");
+    schedule();
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (!paused && !reduce) timer = setTimeout(() => go(index + 1), DURATION);
+  }
+  function pause(p) {
+    paused = p; show.classList.toggle("is-paused", p);
+    if (p) clearTimeout(timer); else schedule();
+  }
+
+  $("showPrev").addEventListener("click", () => go(index - 1));
+  $("showNext").addEventListener("click", () => go(index + 1));
+  dots.forEach((d) => d.addEventListener("click", () => go(Number(d.dataset.go))));
+  viewport.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") go(index - 1);
+    if (e.key === "ArrowRight") go(index + 1);
+  });
+  viewport.addEventListener("mouseenter", () => pause(true));
+  viewport.addEventListener("mouseleave", () => pause(false));
+  document.addEventListener("visibilitychange", () => pause(document.hidden));
+
+  // swipe / drag
+  let startX = null, dx = 0;
+  viewport.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a, button")) return;
+    startX = e.clientX; dx = 0; track.classList.add("is-dragging"); pause(true);
+  });
+  addEventListener("pointermove", (e) => {
+    if (startX === null) return;
+    dx = e.clientX - startX;
+    track.style.transform = `translateX(calc(${-index * 100}% + ${dx}px))`;
+  });
+  addEventListener("pointerup", () => {
+    if (startX === null) return;
+    track.classList.remove("is-dragging");
+    startX = null;
+    const threshold = viewport.offsetWidth * 0.15;
+    go(dx < -threshold ? index + 1 : dx > threshold ? index - 1 : index);
+    if (!viewport.matches(":hover")) pause(false);
+  });
+
+  // slide buttons jump to a filtered collection
+  show.querySelectorAll("[data-filter-go]").forEach((a) => a.addEventListener("click", () => {
+    const chip = document.querySelector(`.chip[data-filter="${a.dataset.filterGo}"]`);
+    if (chip) chip.click();
+  }));
+
+  go(0);
+})();

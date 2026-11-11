@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Joycek — Sewn by Hand, Delivered to You</title>
-  <meta name="description" content="Joycek is a unisex atelier. Every piece is cut and sewn by our own hands, pressed, wrapped and delivered to your door. Sew one, and we sew a second for you, on the house." />
+  <title>Joycek Fashion — Sewn by Hand, Delivered to You</title>
+  <meta name="description" content="Joycek Fashion is a unisex atelier. Every piece is cut and sewn by our own hands, pressed, wrapped and delivered to your door. Sew one, and we sew a second for you, on the house." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -20,9 +20,9 @@
 
   <!-- Navigation -->
   <header class="nav" id="nav">
-    <a href="#top" class="logo" aria-label="Joycek home">
+    <a href="#top" class="logo" aria-label="Joycek Fashion home">
       <span class="logo__mark">J</span>
-      <span class="logo__word">Joycek</span>
+      <span class="logo__word">Joycek<small>Fashion</small></span>
     </a>
     <nav class="nav__links" aria-label="Main">
       <a href="#collection">Collection</a>
@@ -48,7 +48,7 @@
           Worn by <em>yours.</em>
         </h1>
         <p class="hero__lede reveal">
-          We don't stock clothes — we make them. Every Joycek piece is cut, stitched and pressed
+          We don't stock clothes — we make them. Every Joycek Fashion piece is cut, stitched and pressed
           at our own table, then wrapped and delivered straight to your door.
         </p>
         <div class="hero__actions reveal">
@@ -70,10 +70,101 @@
         <div class="hero__card hero__card--b" data-art="blazer" data-fabric="#1f2a2b" data-accent="#c9a46a" data-pattern="pinstripe"></div>
         <div class="hero__tag">
           <span class="hero__tag-label">Hand-finished</span>
-          <span class="hero__tag-sig">by the Joycek atelier</span>
+          <span class="hero__tag-sig">by Joycek Fashion</span>
         </div>
         <div class="needle">
           <svg viewBox="0 0 120 20"><defs><linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#f4efe6"/><stop offset=".5" stop-color="#9b9a96"/><stop offset="1" stop-color="#e9e4da"/></linearGradient></defs><path d="M2 10 L100 7 Q118 10 100 13 Z" fill="url(#steel)"/><ellipse cx="96" cy="10" rx="7" ry="1.4" fill="#f6f1e9"/></svg>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SLIDESHOW -->
+    <section class="show" id="showcase" aria-roledescription="carousel" aria-label="Joycek Fashion highlights">
+      <div class="show__viewport" id="showViewport" tabindex="0">
+        <div class="show__track" id="showTrack">
+
+          <article class="slide" style="--s1:#7a2e2a;--s2:#3d1412" aria-roledescription="slide" aria-label="1 of 5">
+            <div class="slide__copy">
+              <p class="slide__kicker">The Second Stitch</p>
+              <h2 class="slide__title">Sew one.<br /><em>We sew the second.</em></h2>
+              <p class="slide__text">Choose any piece, then any second piece from the collection. Both are cut and sewn by hand, and the second is our gift to you.</p>
+              <a href="#second-stitch" class="btn btn--gold">See how it works</a>
+            </div>
+            <div class="slide__art">
+              <div class="slide__card slide__card--back" data-art="blazer" data-fabric="#1f2a2b" data-accent="#c9a46a" data-pattern="pinstripe" data-bg="#e2ddd2,#b9ae9b"></div>
+              <div class="slide__card slide__card--front" data-art="wrap" data-fabric="#7a2e2a" data-accent="#c9a46a" data-pattern="weave" data-bg="#efdcc8,#d6b48f"></div>
+              <span class="slide__seal">2 for 1</span>
+            </div>
+          </article>
+
+          <article class="slide" style="--s1:#1f2a2b;--s2:#0e1314" aria-roledescription="slide" aria-label="2 of 5">
+            <div class="slide__copy">
+              <p class="slide__kicker">New this season</p>
+              <h2 class="slide__title">The Oxblood<br /><em>Evening Coat</em></h2>
+              <p class="slide__text">Deep velvet, a sharp lapel and a hand-finished belt. Made for the night, and made by hand.</p>
+              <a href="#collection" class="btn btn--gold" data-filter-go="outerwear">Sew it for me</a>
+            </div>
+            <div class="slide__art">
+              <div class="slide__card slide__card--solo" data-art="coat" data-fabric="#5a1f1c" data-accent="#c9a46a" data-pattern="satin" data-bg="#efe2d8,#c9a892"></div>
+              <span class="slide__seal">New</span>
+            </div>
+          </article>
+
+          <article class="slide" style="--s1:#5f6e55;--s2:#2c3527" aria-roledescription="slide" aria-label="3 of 5">
+            <div class="slide__copy">
+              <p class="slide__kicker">Unisex tailoring</p>
+              <h2 class="slide__title">One cut.<br /><em>Every body.</em></h2>
+              <p class="slide__text">Blazers, trousers and jumpsuits drafted to your measurements, for women, for men, and for everyone in between.</p>
+              <a href="#collection" class="btn btn--gold" data-filter-go="tailoring">Explore tailoring</a>
+            </div>
+            <div class="slide__art">
+              <div class="slide__card slide__card--back" data-art="trousers" data-fabric="#d8c3a0" data-accent="#7a2e2a" data-pattern="weave" data-bg="#e6dccd,#c7b597"></div>
+              <div class="slide__card slide__card--front" data-art="jumpsuit" data-fabric="#5f6e55" data-accent="#e6cf9f" data-pattern="plain" data-bg="#efe7da,#d8cab1"></div>
+              <span class="slide__seal">Unisex</span>
+            </div>
+          </article>
+
+          <article class="slide" style="--s1:#a8743a;--s2:#5a3a18" aria-roledescription="slide" aria-label="4 of 5">
+            <div class="slide__copy">
+              <p class="slide__kicker">Cloth with a story</p>
+              <h2 class="slide__title">The Heritage<br /><em>Print Kaftan</em></h2>
+              <p class="slide__text">Bold print and an easy, flowing cut. Every motif is matched at the seams by hand.</p>
+              <a href="#collection" class="btn btn--primary" data-filter-go="dresses">Sew it for me</a>
+            </div>
+            <div class="slide__art">
+              <div class="slide__card slide__card--solo" data-art="kaftan" data-fabric="#c9a46a" data-accent="#7a2e2a" data-pattern="print" data-bg="#efe6d6,#d9c7a6"></div>
+              <span class="slide__seal">Hand-matched</span>
+            </div>
+          </article>
+
+          <article class="slide" style="--s1:#3a2c22;--s2:#1a120c" aria-roledescription="slide" aria-label="5 of 5">
+            <div class="slide__copy">
+              <p class="slide__kicker">From our table to your door</p>
+              <h2 class="slide__title">Pressed, wrapped<br /><em>&amp; delivered.</em></h2>
+              <p class="slide__text">Every order leaves our atelier folded in tissue, boxed with care and brought straight to your door.</p>
+              <a href="#journey" class="btn btn--gold">Follow the journey</a>
+            </div>
+            <div class="slide__art">
+              <div class="parcel" aria-hidden="true">
+                <div class="parcel__lid"></div>
+                <div class="parcel__box"><span>Joycek<small>Fashion</small></span></div>
+                <div class="parcel__ribbon"></div>
+                <div class="parcel__bow"></div>
+              </div>
+              <span class="slide__seal">To your door</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="show__controls">
+        <span class="show__count"><b id="showNow">01</b> / <span id="showAll">05</span></span>
+        <div class="show__dots" id="showDots" role="tablist" aria-label="Choose slide"></div>
+        <div class="show__arrows">
+          <button class="show__arrow" id="showPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="show__arrow" id="showNext" aria-label="Next slide"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
         </div>
       </div>
     </section>
@@ -165,7 +256,7 @@
         <p class="eyebrow reveal">The Atelier</p>
         <h2 class="reveal">Every seam is <em>ours.</em></h2>
         <p class="reveal">
-          Joycek is not a warehouse. It is a table, a pair of shears, a measuring tape and
+          Joycek Fashion is not a warehouse. It is a table, a pair of shears, a measuring tape and
           the patient hands that use them. We choose the cloth, we cut the pattern, and we sew
           every seam ourselves — for women, for men, for everyone in between.
         </p>
@@ -175,7 +266,7 @@
         </p>
         <div class="signature reveal">
           <span>With thread &amp; love,</span>
-          <strong>The Joycek Atelier</strong>
+          <strong>Joycek Fashion</strong>
         </div>
       </div>
     </section>
@@ -237,7 +328,7 @@
     <section class="cta">
       <div class="cta__inner reveal">
         <h2>Two garments.<br /><em>One price.</em> Made by hand.</h2>
-        <p>Join the Joycek list for first look at new cloth, new patterns and atelier stories.</p>
+        <p>Join the Joycek Fashion list for first look at new cloth, new patterns and atelier stories.</p>
         <form class="cta__form" id="ctaForm">
           <label class="sr-only" for="email">Email address</label>
           <input id="email" type="email" placeholder="Your email address" required />
@@ -250,7 +341,7 @@
 
   <footer class="footer">
     <div class="footer__brand">
-      <a href="#top" class="logo logo--light"><span class="logo__mark">J</span><span class="logo__word">Joycek</span></a>
+      <a href="#top" class="logo logo--light"><span class="logo__mark">J</span><span class="logo__word">Joycek<small>Fashion</small></span></a>
       <p>A unisex atelier. Sewn by hand, delivered to you.</p>
     </div>
     <div class="footer__cols">
@@ -258,7 +349,7 @@
       <div><h5>Care</h5><a href="#journey">Delivery</a><a href="#collection">Sizing &amp; fit</a><a href="#collection">Fabric care</a></div>
       <div><h5>Say hello</h5><a href="#top">Instagram</a><a href="#top">WhatsApp</a><a href="#top">Email us</a></div>
     </div>
-    <p class="footer__legal">© <span id="year"></span> Joycek Atelier. Every piece sewn by hand.</p>
+    <p class="footer__legal">© <span id="year"></span> Joycek Fashion. Every piece sewn by hand.</p>
   </footer>
 
   <!-- BAG DRAWER -->
